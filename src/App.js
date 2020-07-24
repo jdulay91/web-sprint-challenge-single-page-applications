@@ -122,7 +122,11 @@ const App = () => {
     errors={formErrors}
 
      />
-    <Order />
+    {orders.map(order=>{
+      return(
+        <Order key={order.id} information={order}/>
+      )
+    })}
 
     </>
   );
