@@ -131,12 +131,14 @@ const App = () => {
             errors={formErrors}
           />
         </Route>
+
+
       </Switch>
       {orders.map(order => {
-        return (
-          <Order key={order.id} information={order} />
-        )
-      })}
+            return (
+              <Order key={order.id} information={order} />
+            )
+          })}
 
     </>
   );
