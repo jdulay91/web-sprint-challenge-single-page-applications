@@ -132,8 +132,6 @@ const App = () => {
           />
         </Route>
       </Switch>
-
-
       {orders.map(order => {
         return (
           <Order key={order.id} information={order} />
