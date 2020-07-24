@@ -7,7 +7,7 @@ const formSchema = yup.object().shape({
         .required("Email is required"),
     name: yup
         .string()
-        .min(3, "name must be at least 3 characters")
+        .min(2, "name must be at least 3 characters")
         .required("Who dis pizza 4?"),
     //   role: yup
     //     .string()
@@ -18,7 +18,10 @@ const formSchema = yup.object().shape({
     address: yup
         .string()
         .min(10, "Address and Zip please")
-        .required("Address is required!")
+        .required("Address is required!"),
+    special: yup
+        .string()
+        .min(0, 'whatcha want')
 })
 
 export default formSchema

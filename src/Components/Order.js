@@ -21,6 +21,7 @@ export default function Order({ information }) {
                 </div>
             }
             <p>Your Order is Arriving in {deliveryTime} minutes</p>
+        <p>This is What you asked for {information.special}</p>
         </div>
     )
 }

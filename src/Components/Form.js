@@ -25,6 +25,8 @@ export default function Form(props) {
     }
 
     return (
+        <div>
+            
         <form onSubmit={onSubmit}>
             <button disabled={disabled}>Gimme That Pizza</button>
             <div>
@@ -60,6 +62,14 @@ export default function Form(props) {
                 type='email'
                 onChange={onInputChange}
                 value={values.email}
+            />
+                        <label htmlFor='special'>Special Request</label>
+            <input
+                name='special'
+                id='special'
+                type='text'
+                onChange={onInputChange}
+                value={values.special}
             />
 
 
@@ -109,9 +119,10 @@ export default function Form(props) {
                     checked={values.toppings.peppers === true}
                     onChange={onCheckboxChange}
                 />
-
             </label>
-        </form>
+        </form>     
 
+
+        </div>
     )
 }
