@@ -97,6 +97,14 @@ const App = () => {
     postNewOrder(newOrder)
   }
 
+  //effects
+
+  useEffect(()=>{
+    formSchema.isValid(formValues).then(valid=>{
+      setDisabled(!valid)
+    })
+  },[formValues])
+
 
 
 
@@ -105,7 +113,15 @@ const App = () => {
   return (
     <>
     <Home />
-    <Form />
+    <Form
+    values={formValues}
+    inputChange={inputChange}
+    checkboxChange={checkboxChange}
+    submit={submit}
+    disabled={disabled}
+    errors={formErrors}
+
+     />
     <Order />
 
     </>
